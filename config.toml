@@ -2,43 +2,24 @@
 languageCode = "en-us"
 title = "Nadine Navarro"
 theme = "hugo-artists-theme"
+canonifurls = true
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+indexes =
+  category = "categories"
 
 [params]
-
-	# You can use Markdown syntax for urls [text](//url.to/source) for
-	# most longer texts.
-
-	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
 	name = "Nadine Navarro"
 	description = "Immigration blog of Nadine Navarro for Miami Immigration. "
-
-	# Since this template is static, the contact form uses www.formspree.io as a
-	# proxy. The form makes a POST request to their servers to send the actual
-	# email. Visitors can send up to a 1000 emails each month for free.
-    #
-    # What need to do for the setup?
-    #
-    # - set your email address under 'email' below
-    # - upload the generated site to your server
-    # - send a dummy email yourself to confirm your account
-    # - click the confirm link in the
 	email = "navarroimmigration@gmail.com"
 
-
-	# Header an navigation
-	#
-	# To change the header background the 'hero-bg-jpg' at 'static/img'.
-	# Do the same with the logo ('logo.svg').
-	# But keep the original filename!
 	[params.header]
 		title = "Navarro Immigration"
 		shortBio = "Trusted // Honest // Experienced"
 
 
 	# About section
-	#
-	# Replace the 'avatar.jpg' under 'static/img' with your own image.
 	[params.about]
 		title = "About me"
 		bio = "**_Nadine Navarro_** received law degree from the _Florida State University College of Law_, where she completed courses in *Immigration and Asylum and Refugee Law*. She comes from an immigrant family and is a **passionate** immigrant advocate. You can **trust** Nadine for **honest** and **zealous representation**. You may contact Nadine with any immigration question or concerns."
