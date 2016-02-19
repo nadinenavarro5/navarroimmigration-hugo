@@ -1,4 +1,5 @@
-# Site settingsbaseurl = "http://navarroimmigration/"
+# Site settings
+baseurl = "http://navarroimmigration.com/"
 languageCode = "en-us"
 title = "Nadine Navarro"
 theme = "hugo-artists-theme"
@@ -6,8 +7,6 @@ canonifurls = true
 contentdir = "content"
 layoutdir = "layouts"
 publishdir = "public"
-indexes =
-  category = "categories"
 
 [params]
 	name = "Nadine Navarro"
