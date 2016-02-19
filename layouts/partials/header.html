@@ -1,0 +1,17 @@
+{{ "<!-- Header section -->" | safeHTML }}
+<header id="header">
+    <nav>
+        {{ with .Site.Params.about.title }}<a class="menu-color" href="#about-me">{{ . }}</a>{{ end }}
+        {{ with .Site.Data.blogs.title }}<a class="menu-color"href="#blogs">{{ . }}</a>{{ end }}
+        {{ with .Site.Params.contact.title }}<a class="menu-color" href="#contact">{{ . }}</a>{{ end }}
+    </nav>
+    
+    {{ with .Site.Params.header.title }}<h1><span>{{ . }}</span></h1>{{ end }}
+    {{ with .Site.Params.header.shortBio }}<p class="kicker">{{ . }}</p>{{ end }}
+    
+    <div class="face-lockup social-links">   
+        {{range .Site.Params.social}}
+        <a class="menu-color" href="{{ .link }}"  target="_blank"><i class="fa fa-{{.name}}"></i></a>
+        {{ end }}
+    </div>  
+</header>

@@ -1,0 +1,133 @@
+li{
+    list-style: none;
+}
+
+.biglink{
+    text-align: center;
+    padding-bottom: 100px;
+    padding-left: 5%;
+}
+
+header{
+    background-color: navy;
+    background-image:none;
+}
+
+header::after {
+    opacity: 0.8;
+    content: "";
+    background-image: url(../img/hero-bg.jpg);
+    z-index: -1;
+    display: block;
+    top: 400px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-repeat: no repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-blend-mode: overlay, normal;
+}
+
+.menu-color,
+footer .lockup .content-wrap a,
+footer .lockup .content-wrap .copyright {
+    color: white;
+}
+
+.social-links a{
+    color: white;
+}
+
+.social-links a::after{
+    color: white;
+    border: 2px solid white;
+}
+
+.social-links a:hover{
+    border: 2px solid white;
+}
+
+.social-links a i {
+    margin: 25% 25%;
+}
+
+h2{
+    color:#666;
+}
+
+.blurb{
+    max-width: 1000px;
+}
+
+#contact, #blogs, #form-title{
+    color: #666;
+    text-align: center;
+    padding: 50px 0 30px;
+}
+.section-about{
+    padding-top: 300px;
+}
+
+.face-lockup .face-img{
+    order:0;
+    -webkit-box-ordinal-group: 0;
+}
+
+.face-lockup > span{
+    max-width: 400px;
+    text-align: left;
+    padding-left: 40px;
+}
+
+footer{
+    background-image: none;
+    background-color: navy;
+}
+
+.copyright {
+    color:white;
+}
+
+form input, form textarea{
+    border: 3px solid navy;
+}
+
+
+form [type="submit"]{
+    background-color: navy;
+}
+
+form [type="submit"]:hover{
+    background-color: white;
+    color:navy;
+}
+
+
+/* Media Queries */
+
+@media (min-width: 1000px){
+    header::after {
+        top:375px;
+    }
+    .face-lockup > span{
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1000px){
+    .blurb{
+        padding-top: 100px;
+    }
+}
+
+
+@media (max-width: 760px){
+    header{
+        padding-bottom: 0;
+    }
+    .section-about {
+        padding-top: 100px;
+    }
+}

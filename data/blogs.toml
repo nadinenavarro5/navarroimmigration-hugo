@@ -1,0 +1,34 @@
+# Section title
+title = "Blogs"
+
+[[blog]]
+    name = "Why you should not wait to Naturalize"
+    folder = "blog-1"
+
+[[blog]]
+    name = "Consular Services"
+    folder = "blog-2"
+
+[[blog]]
+    name = "Asylum"
+    folder = "blog-3"
+
+[[blog]]
+    name = "Naturalization"
+    folder = "blog-4"
+
+[[blog]]
+    name = "Adjustment of Status"
+    folder = "blog-5"
+
+[[blog]]
+    name = "Cuban Adjustment"
+    folder = "blog-6"
+
+[[blog]]
+    name = "Family Petitions"
+    folder = "blog-7"
+
+[[blog]]
+    name = "Visitor Visas"
+    folder = "blog-8"
