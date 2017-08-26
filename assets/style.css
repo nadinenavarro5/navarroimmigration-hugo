@@ -1,9 +1,14 @@
+.primary-bg, .social-1 li a:hover, .collapsible.style-1 .collapsible-header.active  {
+  background-color: #FF9055;
+}
+
 .is-sticky .site-logo img {
   height: 56px;
 }
 .site-logo img {
   height: 72px;
 }
+
 
 @media only screen and (max-width: 767px) {
   .site-logo img {
