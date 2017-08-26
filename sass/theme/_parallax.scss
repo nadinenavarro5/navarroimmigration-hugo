@@ -1,0 +1,66 @@
+
+/*==============================================
+    Parallax
+===============================================*/
+/*----------------------------------------
+    Parallax block 1
+------------------------------------------*/
+.parallax-block-1 {
+    background-color: $light;
+    padding: 60px;
+    h2 {
+        font-size: 48px;
+        line-height: 63px;
+    }
+    p {
+        margin-top: 7px;
+    }
+}
+/*----------------------------------------
+    Parallax block 2
+------------------------------------------*/
+.parallax-block-2 {
+    background-color: $gray-bg-3;
+    h2 {
+        
+    }
+    p {
+        font-size: 16px;
+    }
+    .right-bg {
+        background-color: $gray-bg-3;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+/*----------------------------------------
+    Parallax block 3
+------------------------------------------*/
+.parallax-block-3 {
+    background-color: rgba($light, 0.9);
+    padding: 150px 0;
+    position: relative;
+    h2 {
+        
+    }
+    p {
+        font-size: 16px;
+    }
+    .left-bg {
+        background-color: rgba($light, 0.9);
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .right-curv {
+        border-color: transparent transparent transparent rgba($light, 0.9);
+        border-style: solid;
+        border-width: 0 0 150px 160px;
+        bottom: 0;
+        left: 100%;
+        position: absolute;
+    }
+}

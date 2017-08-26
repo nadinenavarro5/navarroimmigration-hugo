@@ -1,0 +1,407 @@
+
+.ml-input:focus:not([type]):not([readonly]),
+.ml-input[type="text"]:focus:not([readonly]),
+.ml-input[type="password"]:focus:not([readonly]),
+.ml-input[type="email"]:focus:not([readonly]),
+.ml-input[type="url"]:focus:not([readonly]),
+.ml-input[type="time"]:focus:not([readonly]),
+.ml-input[type="date"]:focus:not([readonly]),
+.ml-input[type="datetime"]:focus:not([readonly]),
+.ml-input[type="datetime-local"]:focus:not([readonly]),
+.ml-input[type="tel"]:focus:not([readonly]),
+.ml-input[type="number"]:focus:not([readonly]),
+.ml-input[type="search"]:focus:not([readonly]),
+.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid $primary-color;
+    box-shadow: 0 1px 0 0 $primary-color;
+}
+
+.ml-input:focus:not([type]):not([readonly]) + label,
+.ml-input[type="text"]:focus:not([readonly]) + label,
+.ml-input[type="password"]:focus:not([readonly]) + label,
+.ml-input[type="email"]:focus:not([readonly]) + label,
+.ml-input[type="url"]:focus:not([readonly]) + label,
+.ml-input[type="time"]:focus:not([readonly]) + label,
+.ml-input[type="date"]:focus:not([readonly]) + label,
+.ml-input[type="datetime"]:focus:not([readonly]) + label,
+.ml-input[type="datetime-local"]:focus:not([readonly]) + label,
+.ml-input[type="tel"]:focus:not([readonly]) + label,
+.ml-input[type="number"]:focus:not([readonly]) + label,
+.ml-input[type="search"]:focus:not([readonly]) + label,
+.materialize-textarea:focus:not([readonly]) + label {
+    color: $primary-color;
+}
+
+.input-gray:not([type="submit"]) {
+    background-color: $gray-bg-3;
+    border-radius: $border-radius;
+    border: 1px solid transparent;
+    height: 48px;
+    padding: 0 30px;
+    @include calc(width, "100% - 60px");
+}
+
+.form-field {
+    input:not([type="submit"]) {
+        height: 49px;
+        padding: 0 30px;
+        @include calc(width, "100% - 60px");
+    }
+    .input-group-addon {
+        background-color: $gray-bg-3;
+        border-radius: 0 2px 2px 0;
+        border: 0 none;
+        cursor: pointer;
+        line-height: 50px;
+        margin-left: 2px;
+        padding: 0;
+        text-align: center;
+        min-width: 50px;
+        width: 50px;
+    }
+    &.light {
+        input:not([type="submit"]) {
+            border-bottom-color: rgba($light, 0.15);
+            &:focus {
+                border-bottom-color: rgba($light, 0.54);
+            }
+        }
+        .input-group-addon {
+            background-color: rgba($light, 0.2);
+            color: $light;
+        }
+    }
+}
+
+.input-gray {    
+    &:focus {
+        background-color: transparent;
+        border-color: $border-color;
+    }
+}
+
+/*==============================================
+    Contact Form
+===============================================*/
+.contact-block {
+    font-size: 15px;
+    i {
+        font-size: 30px;
+        margin-bottom: 27px;
+    }
+    &.style-2 {
+        padding: 95px;
+    }
+}
+
+.input-field {
+    margin: 0 0 30px;
+    input,
+    .materialize-textarea {
+        font-size: 14px;
+        height: 40px;
+        position: relative;
+        z-index: 10;
+    }
+    label {
+        font-size: 14px;
+        font-weight: 300;
+        left: 0;
+        letter-spacing: 1px;
+        margin: 0;
+        text-transform: uppercase;
+        &.active {
+            font-size: 12px;
+            @include transform(translateY(-80%));
+        }
+    }
+    .ttn {
+        text-transform: none;
+    }
+}
+
+.contact-form {
+    .input-field {
+        label.active {
+            color: $title-color;
+        }
+    }
+    input,
+    .materialize-textarea {
+        &:focus {
+            &:not([readonly]) {
+                + label.error.active {
+                    color: $error-color;
+                }
+            }
+        }
+    }
+    label {
+        color: $title-color;
+        &.error {
+            color: $error-color;
+            display: block;
+            font-weight: 300;
+            letter-spacing: 0;
+            opacity: 1;
+            position: relative;
+            text-transform: none;
+            &.active {
+                font-size: 14px;
+                @include transform(translateY(0px));
+            }
+        }
+    }
+    .form-submit {
+        color: $text-color;
+        border-color: $border-color;
+        font-weight: 300;
+        &:hover {
+            border-color: $title-color;
+        }
+    }
+}
+input.ml-input,
+textarea.materialize-textarea {
+    border-bottom-color: $border-color;
+    margin-bottom: 0;
+    &:focus, &.valid {
+        border-bottom-color: $title-color;
+        box-shadow: none;
+        &:focus {
+            border-bottom-color: $title-color;
+            box-shadow: none;
+        }
+        + label.active {
+            color: $title-color;
+        }
+    }
+}
+.contact-form {
+    [class^="msg-"] {
+        display: none;
+        margin-top: 16px;
+    }
+    .msg-success {
+        color: #4caf50;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+.cf-light {
+    input,
+    .materialize-textarea {
+        color: $light;
+        border-bottom-color: rgba($light, 0.3);
+        &:focus:not([readonly]) {
+            border-bottom-color: $light;
+            box-shadow: none;
+            + label {
+                color: $light;
+            }
+        }
+    }
+    label {
+        color: $light;
+    }
+    input.ml-input, textarea.materialize-textarea {
+        &:focus, &.valid {
+            border-bottom-color: $light;
+            box-shadow: none;
+            &:focus {
+                border-bottom-color: $light;
+                box-shadow: none;
+            }
+            + label.active {
+                color: $light;
+            }
+        }
+    }
+    .input-field {
+        label.active {
+            color: $light;
+        }
+    }
+    .form-submit:not(.btn-white) {
+        color: $light;
+        &:hover {
+            border-color: rgba($light, 0.3);
+        }
+    }
+    .form-submit.btn-white:hover {
+        color: $title-color;
+    }
+}
+
+/*==============================================
+    Google Maps
+===============================================*/
+.map-control {
+    padding-top: 180px;
+    padding-bottom: 150px;
+}
+
+#map-half {
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%;
+}
+
+
+/*==============================================
+    Cuatom Checkbox
+===============================================*/
+
+input[type="radio"] {
+    height: auto;
+    margin: 0;
+    width: auto;
+}
+
+.custom-checkbox {
+    input {
+        display: none;
+        width: auto;
+        &:checked + label::before {
+            background-position: 0 -12px;
+        }
+    }
+    label {
+        cursor: pointer;
+        position: relative;
+        &:before {
+            background: transparent url("../img/icons/check-box.png") no-repeat scroll 0 0;
+            content: "";
+            display: inline-block;
+            height: 12px;
+            margin-right: 7px;
+            position: relative;
+            top: 2px;
+            width: 12px;
+        }
+    }
+    &.light {
+        input:checked + label::before {
+            background-position: -12px -12px;
+        }
+        label::before {
+            background-position: -12px 0;
+        }
+    }
+}
+
+.custom-chekbox-2 {
+    label {
+        cursor: pointer;
+        margin: 0;
+        padding-left: 40px;
+        position: relative;
+        &::before {
+            border: 1px solid rgba($dark, 0.15);
+            content: "";
+            height: 20px;
+            left: 0;
+            position: absolute;
+            top: 50%;
+            width: 20px;
+            @include transform(translateY(-50%));
+        }
+        &::after {
+            content: "";
+            height: 14px;
+            left: 3px;
+            position: absolute;
+            top: 50%;
+            width: 14px;
+            @include transform(translateY(-50%) scale(0));
+            @include transition(all 0.2s linear 0s);
+        }
+    }
+    input {
+        height: 0;
+        opacity: 0;
+        position: absolute;
+        visibility: hidden;
+        width: 0;
+        &:checked + label::after {
+            background-color: $primary-color;
+            @include transform(translateY(-50%) scale(1));
+        }
+    }
+    &.round {
+        label {
+            &::before,
+            &::after {
+                border-radius: 30px;
+            }
+        }
+    }
+    &.dark {
+        input:checked + label::after {
+            background-color: $dark;
+        }
+    }
+    &.icon-check {
+        label {
+            &::after {
+                color: #fff;
+                content: "\f00c";
+                font: normal normal normal 14px/20px "FontAwesome";
+                font-size: inherit;
+                left: 0;
+                text-rendering: auto;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                height: 20px;
+                line-height: 20px;
+                text-align: center;
+                width: 20px;
+            }
+        }
+    }
+}
+
+
+/*==============================================
+    Login Forms
+===============================================*/
+
+.round-input {
+    input {
+        background-color: $gray-bg-3;
+        border: 1px solid transparent;
+        border-radius: 50px;
+        height: 48px;
+        margin-bottom: 0;
+        padding: 0 30px 0 65px;
+        @include calc(width, "100% - 95px");
+        &:focus {
+            background-color: transparent;
+            border-color: $border-color;
+        }
+    }
+    .icon {
+        left: 30px;
+        position: absolute;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    &.light {
+        input {
+            background-color: rgba($light, 0.15);
+            &:focus {
+                background-color: transparent;
+                border-color: rgba($light, 0.15);
+            }
+        }
+    }
+}
+
+
+.selectize-control {
+    z-index: 11;
+}
