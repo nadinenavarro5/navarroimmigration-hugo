@@ -1,0 +1,100 @@
+/*==============================================
+    Price Table
+===============================================*/
+.price-table {
+    padding: 43px 35px 70px;
+}
+.price-head {
+    h3 {
+        font-size: 24px;
+        font-weight: 100;
+    }
+    p {
+        font-size: 18px;
+        margin-top: 3px;
+    }
+    .price {
+        color: $primary-color;
+        font-size: 60px;
+        font-weight: 500;
+        line-height: 1;
+        margin-top: 7px;
+    }
+    span {
+        display: inline-block;
+        font-size: 18px;
+        font-weight: 100;
+        margin-top: 20px;
+    }
+}
+.price-body {
+    margin-top: 36px;
+    li {
+        font-size: 13px;
+        line-height: 17px;
+    }
+}
+.price-foot {
+    margin-top: 52px;
+}
+
+/*--------- Price 1 ----------*/
+
+.price-table {
+    &.style1 {
+        color: $title-color;
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 15px;
+            &:before, &::after {
+                background-color: $title-color;
+                border-radius: 20px;
+                content: "";
+                height: 10px;
+                left: 0;
+                position: absolute;
+                top: 4px;
+                width: 10px;
+            }
+            &::after {
+                background-color: $light;
+                height: 4px;
+                left: 3px;
+                top: 7px;
+                width: 4px;
+            }
+        }
+    }
+    &.style2,
+    &.style3,
+    &.style4 {
+        li {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 48px;
+        }
+    }
+    &.style3,
+    &.style4 {
+        .price-body {
+            margin-left: -35px;
+            margin-right: -35px;
+        }
+        li {
+            border-bottom: 1px solid $border-color;
+            padding: 0 35px;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+    }
+    &.style4 {
+        padding-bottom: 40px;
+        &:hover {
+            .price-body {
+                color: $title-color;
+            }
+        }
+    }
+}
