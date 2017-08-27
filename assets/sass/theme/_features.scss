@@ -1,0 +1,493 @@
+
+/*==============================================
+    Features
+===============================================*/
+.feature-1 {
+    padding-right: 3px !important;
+    &:last-child {
+        padding-right: 0 !important;
+    }
+    .feature-inner {
+        color: $light;
+        padding: 40px 15px 46px;
+        position: relative;
+        z-index: 10;
+        & > * {
+            position: relative;
+            z-index: 2;
+        }
+    }
+    .hover {
+        background-color: $primary-color;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 1;
+        @include transition(all 0.3s ease 0s);
+    }
+    &:hover, &.active {
+        .hover {
+            bottom: -20px;
+            top: -20px;
+            box-shadow: $box-shadow-1;
+        }
+    }
+    .icon {
+        font-size: 60px;
+        padding: 9px 28px 0 0;
+    }
+    h3 {
+        color: $light;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+}
+
+.feature-2 {
+    .number {
+        color: rgba($dark, 0.1);
+        font-size: 51px;
+        font-weight: 700;
+    }
+    h4 {
+        margin-bottom: 13px;
+    }
+}
+
+.feature-3-devider {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    &::before, &::after {
+        background-color: rgba($dark, 0.2);
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 50%;
+    }
+    &::after {
+        height: 100%;
+        width: 1px;
+        top: 0;
+        left: 50%;
+    }
+    .icon {
+        background-color: $gray-bg-3;
+        padding: 10px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        z-index: 1;
+        @include transform(translate(-50%, -50%));
+    }
+}
+
+.feature-3 {
+    padding: 60px 65px 70px;
+    h2 {
+        font-size: 36px;
+        margin-bottom: 18px;
+    }
+}
+
+.feature-4 {
+    .icon {
+        span {
+            background-color: #fff;
+            border-radius: 50%;
+            display: block;
+            box-shadow: $normal-shadow;
+            font-size: 30px;
+            height: 80px;
+            line-height: 80px;
+            margin-right: 30px;
+            text-align: center;
+            width: 80px;
+            @include transition(all 0.3s ease 0s);
+        }
+        i {
+            line-height: inherit;
+        }
+    }
+    h4 {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+    &:hover {
+        .icon {
+            span {
+                color: $light;
+                background-color: $primary-color;
+                box-shadow: $hover-shadow;
+            }
+        }
+    }
+}
+
+.feature-5 {
+    margin-bottom: 33px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    h3 {
+        font-size: 24px;
+        margin-bottom: 23px;
+    }
+}
+
+.feature-6 {
+    margin-bottom: 30px;
+    .icon {
+        border: 1px solid rgba($dark, 0.2);
+        border-radius: 130px;
+        float: left;
+        font-size: 48px;
+        height: 130px;
+        line-height: 130px;
+        position: relative;
+        text-align: center;
+        width: 130px;
+        z-index: 0;
+        @include transition(all 0.3s ease 0s);
+        &::before {
+            background-color: #ddd;
+            border-radius: 130px;
+            bottom: 3px;
+            content: "";
+            left: 3px;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            z-index: -1;
+            @include transition(background 0.3s ease 0s);
+        }
+        &::after {
+            background-color: rgba($dark, 0.2);
+            content: "";
+            height: 2px;
+            left: 100%;
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            @include transition(background 0.3s ease 0s);
+        }
+    }
+    .text {
+        float: left;
+        margin: 45px 0 0 90px;
+        width: -webkit-calc(100% - 220px);
+        width:    -moz-calc(100% - 220px);
+        width:         calc(100% - 220px);
+        h3 {
+            font-size: 30px;
+            margin-bottom: 11px;
+            @include transition(color 0.3s ease 0s);
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    &:hover {
+        .icon {
+            color: $light;
+            border-color: $primary-color;
+            &::before {
+                background-color: $primary-color;
+            }
+            &::after {
+                background-color: $primary-color;
+            }
+        }
+        h3 {
+            color: $primary-color;
+        }
+    }
+    &:nth-child(4) {
+        margin-bottom: 0;
+    }
+}
+
+.feature-carousel-1 {
+    padding: 160px 0 150px 140px;
+    z-index: 1;
+    .slick-slide {
+        border: 0;
+    }
+    .slick-dots {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        @include transform(translateY(-50%));
+    }
+    + .device-nexus {
+        background: transparent url("../img/misc/nexus.png") no-repeat scroll 0 0;
+        height: 819px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 433px;
+        &.white {
+            background-image: url("../img/misc/nexus-white.png");
+            background-color: transparent !important;
+        }
+    }
+}
+
+.fc-item {
+    border: 0;
+    margin-bottom: 34px;
+    .icon {
+        border: 1px solid;
+        border-radius: 50%;
+        color: $light;
+        float: left;
+        font-size: 35px;
+        height: 105px;
+        line-height: 105px;
+        margin-right: 330px;
+        position: relative;
+        text-align: center;
+        width: 105px;
+        &::after {
+            background-color: $light;
+            content: "";
+            height: 2px;
+            position: absolute;
+            top: 50%;
+            width: 0;
+            @include calc( left, '100% + 30px' );
+            @include transition ( all 0.3s ease 0.1s );
+        }
+    }
+    .text {
+        color: $light;
+        float: left;
+        margin-top: 30px;
+        position: relative;
+        width: 350px;
+        &::before {
+            background-color: $light;
+            content: "";
+            height: 2px;
+            position: absolute;
+            top: 23px;
+            width: 0;
+            @include calc( left, '-50% + 13px' );
+            @include transition ( all 0.3s ease 0.3s );
+        }
+        h3 {
+            font-size: 30px;
+            margin: 0 0 10px;
+        }
+    }
+    &.dark {
+        .icon {
+            color: $text-color;
+            &::after {
+                background-color: rgba($dark, 0.1);
+            }
+        }
+        .img {
+            border: 0;
+            opacity: 0.75;
+            img {
+                width: 100%;
+            }
+        }
+        .text {
+            color: $text-color;
+            &::before {
+                background-color: rgba($dark, 0.1);
+            }
+        }
+    }
+    &.slick-center {
+        .icon::after {
+            width: 115px;
+        }
+        .img {
+            opacity: 1;
+        }
+        .text::before {
+            width: 132px;
+        }
+    }
+}
+
+.feature-7 {
+    position: relative;
+    
+    &::before {
+        background-color: $primary-color;
+        content: "";
+        width: 3px;
+        height: 0;
+        position: absolute;
+        left: -30px;
+        bottom: 0;
+        @include transition();
+    }
+
+    .icon {
+        float: left;
+        font-size: 30px;
+        margin-right: 30px;
+    }
+
+    &:hover {
+        &::before {
+            height: 100%;
+        }
+
+        .icon {
+            @include animation ( 0.5s rotate-180-deg 0s );
+        }
+        .icon, h3 {
+            color: $primary-color;
+        }
+    }
+}
+
+@include keyframes( rotate-180-deg ) {
+    100% {
+        @include transform(rotate(180deg) translateZ(0));
+    }
+}
+
+.feature-8 {
+    background-color: $primary-color;
+    border-radius: 3px;
+    color: $light;
+    min-height: 320px;
+    padding: 0 55px;
+    text-align: center;
+    .vcc-inner {
+        left: 55px;
+        position: absolute;
+        right: 55px;
+        top: 50%;
+        @include transform (translateY(-50%));
+    }
+    i {
+        font-size: 48px;
+        margin-bottom: 30px;
+    }
+    h3 {
+        position: relative;
+        &::before {
+            background-color: $primary-color;
+            bottom: -28px;
+            content: "";
+            height: 2px;
+            position: absolute;
+            left: 50%;
+            width: 50px;
+            @include transform(translateX(-50%));
+        }
+    }
+    p {
+        color: $primary-color;
+        height: 0;
+        margin-top: 50px;
+        overflow: hidden;
+        @include transition();
+    }
+    &:hover {
+        background-color: $light;
+        box-shadow: $hover-shadow;
+        @include transform (translateY(-20px));
+        i, h3 {
+            color: $primary-color;
+        }
+        p {
+            height: 48px;
+        }
+    }
+}
+
+.sp-feature-1 {
+    margin-bottom: 80px;
+    position: relative;
+    &::before, &::after {
+        background-color: #e5e5e5;
+        content: "";
+        height: 2px;
+        left: 150px;
+        margin-top: -1px;
+        position: absolute;
+        right: -50px;
+        top: 50%;
+        z-index: 1;
+    }
+    &::after {
+        background-color: $primary-color;
+        width: 0;
+        @include transition();
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .circle {
+        border: 2px solid $primary-color;
+        height: 20px;
+        position: absolute;
+        right: -75px;
+        top: 50%;
+        width: 20px;
+        z-index: 5;
+        @include transition (all 0.3s ease 0.3s);
+        @include transform (translateY(-50%) scale(0));
+        &::before {
+            background-color: $primary-color;
+            border-radius: 30px;
+            content: "";
+            height: 10px;
+            left: 50%;
+            margin: -5px 0 0 -5px;
+            position: absolute;
+            top: 50%;
+            width: 10px;
+        }
+    }
+    .icon {
+        background-color: #dedede;
+        border-radius: 50%;
+        font-size: 60px;
+        height: 150px;
+        line-height: 160px;
+        min-width: 150px;
+        text-align: center;
+        width: 150px;
+    }
+    .desc {
+        margin: 0 0 0 70px;
+        position: relative;
+        top: 32px;
+        z-index: 2;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+            @include calc (width, "100% - 90px");
+        }
+        .icon {
+            background-color: $primary-color;
+            color: $light;
+        }
+        .circle {
+            @include transform (translateY(-50%) scale(1));
+        }
+    }
+}
+
+
+

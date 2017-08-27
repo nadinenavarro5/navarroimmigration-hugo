@@ -1,0 +1,152 @@
+/******************************************************************
+Theme Name: Matex HTML5 Multippurpose Template
+Description: Matex HTML5 Multippurpose Template
+Author: Codepixar
+Author URI: http://pixelcoder.net
+Version: 1.0
+Created: 5/06/2017
+******************************************************************/
+/*------------------------------------------------------------------
+[Layout]
+
+* body
+	+ Header / .site-header
+	+ Content / .site-main
+		- Contetnt Area / .section
+	+ Footer / .site-footer
+
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Color codes]
+
+Background: #fff (White)
+Primary:    #f6514c (primary)
+Title  :    #444444 (dark gray)
+Content:    #848484 (Gray)
+
+a (standard):   #f6514c (primary)
+a (hover)   :   #f6514c (primary)
+
+-----------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[Table of contents]
+
+1.  basic
+	1.1	 Variale
+	1.2	 mixins
+	1.3  flexbox mixins
+	1.4  reset
+
+2. Magnific popup
+3. Fileinput
+4. form elemnts
+5. header
+6. title
+7. slider
+8. home pages
+9. service
+10.portfolio
+11. features
+12. price table
+13. testimonials
+14. shop
+15. cta
+16. parallax
+17. tabs
+18. progress bars
+19. blog
+20. process
+21. team
+22. clients
+23. counter
+24. subscriptions
+25. widgets
+26. misc
+27. page
+28. elements
+29. accordion
+30. footer widgets
+31. footer
+32. media queries
+33. local styling
+
+-------------------------------------------------------------------*/
+
+// including variables and mixins
+@import "theme/variables";
+@import "theme/mixins";
+@import "theme/flexbox";
+@import "theme/reset";
+// including reset styles
+
+// magninic popup effect
+@import "theme/mfp-effects";
+@import "theme/fileinput";
+
+
+// contact-form
+@import "theme/forms";
+// header
+@import "theme/header";
+// section title
+@import "theme/title";
+//slider
+@import "theme/slider";
+//home-pages
+@import "theme/home-pages";
+// services
+@import "theme/services";
+// hero sliders
+@import "theme/hero-slider";
+// portfolio / gallery
+@import "theme/portfolio";
+// features
+@import "theme/features";
+// price table
+@import "theme/price-table";
+// testimonials
+@import "theme/testimonials";
+// shop
+@import "theme/shop";
+// call to action
+@import "theme/cta";
+// parallax
+@import "theme/parallax";
+// tabs
+@import "theme/tabs";
+// progress-bars
+@import "theme/progress-bars";
+// blog
+@import "theme/blog";
+// process
+@import "theme/process";
+// team
+@import "theme/team";
+// clients
+@import "theme/clients";
+// counter
+@import "theme/counter";
+// subscription
+@import "theme/subscription";
+// widgets
+@import "theme/widgets";
+// misc
+@import "theme/misc";
+// page
+@import "theme/page";
+// Shortcodes
+@import "theme/elements";
+// accordion
+@import "theme/accordion";
+// footer-widgets
+@import "theme/footer-widgets";
+// footer
+@import "theme/footer";
+// media-queries
+@import "theme/media-queries";
+
+// local-styling
+@import "style";
+
+
+
