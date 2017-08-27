@@ -1,6 +1,9 @@
 .DS_Store
 .zip
 .map
+.*/
+
 
 src/
 logos/
+
