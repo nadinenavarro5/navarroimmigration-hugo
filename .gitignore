@@ -1,6 +1,6 @@
-.DS_Store
-.zip
-.map
+*.DS_Store
+*.zip
+*.map
 .*/
 
 
