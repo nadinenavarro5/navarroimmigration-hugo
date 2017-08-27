@@ -1,16 +1,16 @@
-$primary-color: #FF9055;
+// $primary-color: #FF9055;
 
-.primary-bg, .social-1 li a:hover, .collapsible.style-1 .collapsible-header.active {
-  background-color: $primary-color;
-}
+// .primary-bg, .social-1 li a:hover, .collapsible.style-1 .collapsible-header.active {
+//   background-color: $primary-color;
+// }
 
-[class*='style']:hover > .icon, [class*='style']:hover > h4 {
-  color: $primary-color !important;
-}
+// [class*='style']:hover > .icon, [class*='style']:hover > h4 {
+//   color: $primary-color !important;
+// }
 
-[class*='style']:hover .sep {
-  background-color: $primary-color;
-}
+// [class*='style']:hover .sep {
+//   color: $primary-color;
+// }
 
 
 .is-sticky .site-logo img {
@@ -21,6 +21,9 @@ $primary-color: #FF9055;
   height: 72px;
 }
 
+#go-top:hover .active{
+  // background-color: $primary-color !important;
+}
 
 @media only screen and (max-width: 767px) {
   .site-logo img {
