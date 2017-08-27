@@ -11,6 +11,12 @@
   height: 72px;
 }
 
+.seo-top-nav li a {
+  color: $primary-color;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+
 @media only screen and (max-width: 767px) {
   .site-logo img {
     height: 56px;
