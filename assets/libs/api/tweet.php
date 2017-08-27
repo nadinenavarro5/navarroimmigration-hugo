@@ -1,5 +1,5 @@
 <?php
-    require_once("twitteroauth/twitteroauth.html"); // Path to twitteroauth library
+    require_once("twitteroauth/twitteroauth.php"); // Path to twitteroauth library
     require_once('config.php'); // Path to config file
 
     // Check if keys are in place
