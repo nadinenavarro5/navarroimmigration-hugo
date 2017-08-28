@@ -36,9 +36,9 @@
 	scCarousels();
 	dealsCountdown();
 	bootstrapAccordion();
-	twitterFeeds();
-	twitterFeedsFooter();
-	dribbbleFeeds();
+	// twitterFeeds();
+	// twitterFeedsFooter();
+	// dribbbleFeeds();
 	process5WidthHeight();
 	MiscSliderCarousel();
 	productCarousel();
