@@ -5,14 +5,7 @@ Please visit to learn more about immigration to the United States.
 
 ## License
 
-You may not reuse anything in the following directories without my permission:
-
-```
-posts/
-blogs/
-```
-
-These folders contains copyrighted posts authored by Nadine Navarro :copyright:
+Blog containing posts are copyrighted and authored by Nadine Navarro :copyright:
 
 Otherwise, content is MIT Licensed (where applicable)
 
