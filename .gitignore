@@ -3,6 +3,8 @@
 *.map
 .*/
 
+#for sass logging
+css
 
 src/
 logos/
