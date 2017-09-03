@@ -2286,11 +2286,14 @@
     & > li {
         & > a {
             font-size: 12px;
+            &:visited{
+                color: $light;
+            }
         }
         &:hover,
         &:focus {
             & > a {
-                background-color: #303030;
+                background-color: $primary-darken-1;
                 color: $light;
             }
         }

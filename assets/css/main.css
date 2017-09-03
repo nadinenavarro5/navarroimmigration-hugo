@@ -3971,8 +3971,10 @@ input[type="radio"] {
   }*/ }
   .nav-hover-1 > li > a {
     font-size: 12px; }
+    .nav-hover-1 > li > a:visited {
+      color: #fff; }
   .nav-hover-1 > li:hover > a, .nav-hover-1 > li:focus > a {
-    background-color: #303030;
+    background-color: #d7423e;
     color: #fff; }
 
 .nav-hover-2 {
@@ -21237,6 +21239,10 @@ span.twitter-typeahead {
 
 .finance-slide > h2 {
   font-size: 3.5em; }
+
+/* FAQ page */
+.site-header.sticky {
+  background-color: #211D7C; }
 
 @media only screen and (max-width: 767px) {
   .site-logo img {

@@ -26,6 +26,14 @@
   font-size: 3.5em;
 }
 
+
+
+/* FAQ page */
+.site-header.sticky {
+  background-color: $primary-color;
+}
+
+
 @media only screen and (max-width: 767px) {
   .site-logo img {
     height: 56px;
