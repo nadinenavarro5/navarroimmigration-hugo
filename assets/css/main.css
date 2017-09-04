@@ -21247,5 +21247,8 @@ span.twitter-typeahead {
 @media only screen and (max-width: 767px) {
   .site-logo img {
     height: 56px; } }
+/* CONTACT page */
+.btn-default {
+  background-color: #211D7C; }
 
 /*# sourceMappingURL=main.css.map */
