@@ -21251,4 +21251,8 @@ span.twitter-typeahead {
 .btn-default {
   background-color: #211D7C; }
 
+/* BLOG page */
+.blog-post-1.sticky .post-desc {
+  background-color: rgba(255, 255, 255, 0.95) !important; }
+
 /*# sourceMappingURL=main.css.map */
