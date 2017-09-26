@@ -30,7 +30,7 @@
         }
     });
 
-    var latlong = new google.maps.LatLng( 23.751510, 90.386137 ),
+    var latlong = new google.maps.LatLng(25.763690, -80.18943),
         mapDefaultOptions = {
         // How zoomed in you want the map to start at (always required)
         zoom: 15,
