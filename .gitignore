@@ -1,3 +1,11 @@
-.DS_Store
+*.DS_Store
+*.zip
+*.map
+.*/
 
-themes/
+#for sass logging
+css
+
+src/
+logos/
+
