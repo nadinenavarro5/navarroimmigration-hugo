@@ -132,8 +132,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-md-8">
-                    <!-- <form action="mailto:nadine@navarroimmigration.com" id="contact-form" class="row contact-form" method="post"> -->
-                    <form action="mailto:nadine@navarroimmigration.com" id="contact-form" class="row contact-form">
+                    <form action="https://formspree.io/nadine@navarroimmigration.com" id="contact-form" class="row contact-form" method="POST">
                         <div class="col-xs-12">
                             <div class="input-field">
                                 <input id="name" type="text" name="name" class="ml-input">
@@ -142,19 +141,19 @@
                         </div>
                         <div class="col-xs-12">
                             <div class="input-field">
-                                <input id="phoneNumber" type="text" name="phoneNumber" class="ml-input">
+                                <input id="phoneNumber" type="text" name="_phoneNumber" class="ml-input">
                                 <label for="phoneNumber">Phone Number</label>
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="input-field">
-                                <input id="email" type="email" name="email" class="ml-input">
+                                <input id="email" type="email" name="_replyto" class="ml-input">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="col-xs-12">
                             <div class="input-field">
-                                <input id="subject" type="text" name="subject" class="ml-input">
+                                <input id="subject" type="text" name="_subject" class="ml-input">
                                 <label for="subject">Subject</label>
                             </div>
                         </div>
@@ -165,12 +164,15 @@
                             </div>
                         </div>
                         <div class="col-xs-12 text-right">
-                            <button class="btn-flat btn-default radius text-uppercase transition" type="submit">Submit</button>
+                            <button class="btn-flat btn-default radius text-uppercase transition" type="submit" value="Send">Submit</button>
                         </div>
                         <div class="col-xs-12">
                             <div class="msg-success">Your message was sent successfully</div>
                             <div class="msg-error">Something went wrong, please try again later.</div>
                         </div>
+                        <input type="hidden" name="_next" value="./index.html" />
+                        <input type="hidden" name="_format" value="plain" />
+                        <input type="text" name="_gotcha" style="display:none" />
                     </form> <!-- end .row -->
                 </div> <!-- /.col- -->
                 <div class="col-xs-12 col-md-offset-1 col-md-3">
