@@ -111,7 +111,7 @@ a (hover)   :   #f6514c (primary)
   color: #fff; }
 
 body {
-  color: #848484;
+  color: #333333d9;
   font-family: "Roboto", sans-serif;
   font-size: 14px;
   font-weight: 400;
@@ -3287,7 +3287,7 @@ input[type="radio"] {
     color: #848484;
     display: block;
     line-height: 50px;
-    padding: 0 20px; }
+    padding: 0 4px; }
     .seo-top-nav li a:hover {
       background-color: rgba(0, 0, 0, 0.1); }
     .seo-top-nav li a i {
@@ -7228,7 +7228,7 @@ input[type="radio"] {
 .service.style9:hover .icon, .service.style9:hover h4, .service.style14:hover .icon, .service.style14:hover h4 {
   color: #211D7C; }
 .service.style9.shadow {
-  padding: 60px;
+  padding: 40px;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -21230,7 +21230,7 @@ span.twitter-typeahead {
 
 .seo-top-nav li a {
   color: #211D7C;
-  font-size: 1.25em;
+  font-size: 1.1em;
   font-weight: 600; }
 
 .menu-list > li > a {
