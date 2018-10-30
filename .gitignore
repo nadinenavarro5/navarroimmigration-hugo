@@ -9,6 +9,3 @@ css
 src/
 logos/
 assets/images
-
-# local web server
-.python-version
