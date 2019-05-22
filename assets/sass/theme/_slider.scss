@@ -1,0 +1,832 @@
+
+
+/*----------------------------------------
+    Slider Controls
+------------------------------------------*/
+
+.owl-controls-custom {
+    background-color: rgba($light, 0.7);
+    bottom: 0;
+    padding: 30px 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+    .owl-nav {
+        left: 0;
+        position: absolute;
+        right: 0;
+    }
+    .owl-prev, .owl-next {
+        color: $primary-color;
+        cursor: pointer;
+        font-size: 36px;
+        vertical-align: middle;
+    }
+    .owl-prev {
+        float: left;
+        margin-left: 21px;
+    }
+    .owl-next {
+        float: right;
+        margin-right: 21px;
+    }
+    .owl-dot {
+        background-color: rgba($light-dark, 0.54);
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        position: relative;
+        z-index: 10;
+        &.active {
+            background-color: $primary-color;
+        }
+    }
+}
+
+/*----------------------------------------
+    Slider Control
+------------------------------------------*/
+/*----------- Navigation One ----------------*/
+.ctrl-nav-one {
+    .owl-prev,
+    .owl-next {
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 50%;
+        left: 50px;
+        @include transform(translateY(-50%));
+    }
+    .owl-next {
+        left: auto;
+        right: 50px;
+    }
+    &:hover {
+        .owl-nav {
+            & > div {
+                opacity: 1;
+            }
+        }
+    }
+}
+/*----------- Navigation One ----------------*/
+.ctrl-nav-two {
+    .owl-nav {
+        text-align: center;
+        margin-top: 50px;
+    }
+    .owl-next, .owl-prev {
+        background-color: $light;
+        box-shadow: $box-shadow-1;
+        color: $primary-color;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        margin: 0 6px;
+        line-height: 48px;
+        font-size: 20px;
+    }
+}
+/*----------- Navigation five ----------------*/
+.ctrl-nav-3 {
+    .owl-nav {
+        display: block;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .owl-next, .owl-prev {
+        background-color: $light;
+        box-shadow: $box-shadow-1;
+        color: $primary-color;
+        display: inline-block;
+        width: 48px;
+        height: 48px;
+        margin: 0 6px;
+        line-height: 48px;
+        font-size: 20px;
+    }
+}
+/*----------- Navigation Four ----------------*/
+.ctrl-nav-4 {
+    .owl-nav {
+        div {
+            height: 32px;
+            position: absolute;
+            top: 50%;
+            width: 32px;
+        }
+    }
+    .owl-prev {
+        left: -75px;
+        @include transform(translateY(-50%) rotate(45deg));
+        &::before {
+            background-color: red;
+            content: "";
+            height: 32px;
+            position: absolute;
+            width: 2px;
+        }
+        &::after {
+            background-color: red;
+            bottom: 0;
+            content: "";
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: 32px;
+        }
+    }
+    .owl-next {
+        right: -75px;
+        @include transform(translateY(-50%) rotate(-45deg));
+        &::before {
+            background-color: red;
+            content: "";
+            height: 32px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 2px;
+        }
+        &::after {
+            background-color: red;
+            bottom: 0;
+            content: "";
+            height: 2px;
+            left: 0;
+            position: absolute;
+            width: 32px;
+        }
+    }
+}
+/*----------- Navigation five ----------------*/
+.ctrl-nav-5 {
+    .owl-next, .owl-prev {
+        background-color: $light;
+        font-size: 30px;
+        position: absolute;
+        left: 0;
+        height: 40px;
+        line-height: 40px;
+        width: 60px;
+        text-align: center;
+        @include calc (top, "50% - 98px");
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    .owl-next {
+        left: auto;
+        right: 0;
+    }
+}
+/*----------- Navigation five ----------------*/
+.ctrl-nav-6 {
+    .owl-prev,
+    .owl-next {
+        border-radius: 50px;
+        height: 48px;
+        line-height: 48px;
+        min-width: 110px;
+        position: absolute;
+        top: 50%;
+        opacity: 0;
+        @include transition();
+        @include transform (translateY(-50%));
+    }
+    .text {
+        background-color: $light;
+        font-size: 12px;
+        height: 48px;
+        letter-spacing: 3px;
+        line-height: 46px;
+        overflow: hidden;
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+        transition: all 0.3s ease 0s;
+        width: 0;
+        z-index: -1;
+    }
+    .icon {
+        background-color: $light;
+        border-radius: 50px;
+        box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+        display: block;
+        font-size: 16px;
+        height: 48px;
+        line-height: 48px;
+        text-align: center;
+        top: 0;
+        width: 48px;
+    }
+    .owl-prev {
+        left: 30px;
+        text-align: right;
+        .text {
+            border-radius: 0 50px 50px 0;
+            left: 24px;
+        }
+        &:hover {
+            .text {
+                padding-right: 30px;
+                width: 100%;
+            }
+        }
+    }
+    .owl-next {
+        right: 30px;
+        text-align: left;
+        .text {
+            border-radius: 50px 0 0 50px;
+            right: 24px;
+        }
+        .icon {
+            float: right;
+        }
+        &:hover {
+            .text {
+                padding-left: 30px;
+                width: 100%;
+            }
+        }
+    }
+    &:hover {
+        .owl-prev,
+        .owl-next {
+            opacity: 1;
+        }
+    }
+}
+
+/*----------- Bullet One ----------------*/
+.bullet-one {
+    .owl-dots {
+        text-align: center;
+    }
+    .owl-dot {
+        background-color: $gray-bg;
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border-radius: 30px;
+        margin: 0 3px;
+        @include transition(all 0.3s ease);
+        &.active {
+            background-color: $primary-color;
+        }
+    }
+}
+/*----------- Bullet One ----------------*/
+.bullet-two {
+    .owl-dots {
+        margin-top: 60px;
+        text-align: center;
+    }
+    &.bull-left {
+        .owl-dots {
+            text-align: left;
+        }
+    }
+    .owl-dot {
+        border: 2px solid $light;
+        border-radius: 50px;
+        display: inline-block;
+        height: 20px;
+        line-height: 17px;
+        margin: 0 2.5px;
+        position: relative;
+        width: 20px;
+        span {
+            border-radius: 50px;
+            display: inline-block;
+            height: 10px;
+            margin: 0 auto;
+            width: 10px;
+            left: 50%;
+            opacity: 0;
+            position: absolute;
+            top: 50%;
+            @include transform(translate(-200%, -50%));
+            @include transition(all 0.3s ease 0s);
+        }
+        &.active {
+            span {
+                background-color: $light;
+                opacity: 1;
+                @include transform(translate(-50%, -50%));
+            }
+        }
+    }
+    .slick-dots {
+        li {
+            border: 2px solid transparent;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-block;
+            height: 21px;
+            line-height: 1;
+            margin: 0 2px;
+            width: 21px;
+            @include transition(all 0.4s ease 0s);
+        }
+        .slick-active {
+            border-color: $primary-color;
+            button {
+                opacity: 1;
+                @include transform(translateX(0px));    
+            }
+        }
+        button {
+            background-color: $primary-color;
+            border: 0 none;
+            border-radius: 15px;
+            height: 13px;
+            margin: 2px 0 0 2px;
+            opacity: 0;
+            padding: 0;
+            text-indent: -9999em;
+            width: 13px;
+            @include transform(translateX(-100%));
+            @include transition(all 0.4s ease 0s);
+        }
+    }
+    &.light {
+        .slick-dots {
+            li {
+                border-color: $light;
+            }
+            button {
+                background-color: $light;
+            }
+        }
+    }
+    &.dark {
+        .owl-dot {
+            border-color: rgba($dark, .38);
+            &.active {
+                border-color: rgba($dark, .87);
+                span {
+                    background-color: rgba($dark, 0.87);
+                }
+            }
+        }
+        .slick-dots {
+            li {
+                border-color: $text-color;
+                button {
+                    background-color: $text-color;
+                }
+            }
+            .slick-active {
+                border-color: $title-color;
+                button {
+                    background-color: $title-color;
+                }
+            }
+        }
+    }
+}
+
+.bullet-vertical {
+    .slick-dots {
+        li {
+            display: block;
+            margin: 5px 0;
+            button {
+                @include transform(translateY(-100%));
+            }
+        }
+    }
+    .owl-dots {
+        bottom: auto;
+        left: auto;
+        margin: 0;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        z-index: 60;
+        @include transform(translateY(-50%));
+    }
+    .owl-dot {
+        display: block;
+        margin: 5px 0;
+        span {
+            @include transform (translate(-50%, -200%));
+        }
+    }
+}
+
+.bullet-out-50 {
+    .owl-prev {
+        left: 0;
+        @include transform(translate(-50%, -50%));
+    }
+    .owl-next {
+        right: 0;
+        @include transform(translate(50%, -50%));
+    }
+}
+
+.p-v-10 {
+    .owl-stage-outer {
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+}
+
+/*----------- Bullet Three ----------------*/
+.bullet-3 {
+    .owl-dots {
+        bottom: 23px;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+    }
+    .owl-dot {
+        background-color: rgba($dark, 0.1);
+        border-radius: 15px;
+        display: inline-block;
+        height: 8px;
+        margin: 0 5px;
+        width: 8px;
+        @include transition ();
+        &.active {
+            background-color: $title-color;
+            height: 18px;
+        }
+    }
+}
+
+/*----------- Bullet four ----------------*/
+.bullet-4 {
+    .owl-dots {
+        position: absolute;
+        top: 50%;
+        left: 40px;
+        transform: translateY(-50%);
+    }
+    .owl-dot {
+        background-color: rgba($dark, 0.1);
+        border-radius: 15px;
+        display: block;
+        height: 8px;
+        margin: 5px 0;
+        width: 8px;
+        @include transition ();
+        &.active {
+            background-color: $title-color;
+            width: 18px;
+        }
+    }
+}
+
+/*==============================================
+    Slider
+===============================================*/
+.slider-section {
+    .item {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+.slide-content {
+    img.logo {
+        margin: 0 auto 130px;
+        width: auto;
+    }
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    @include transform(translateY(-50%));
+}
+
+.creative-banner,
+.business-banner {
+    .slide-content {
+        h2 {
+            color: $title-color;
+            font-size: 60px;
+            font-weight: 300;
+            line-height: 1;
+        }
+    }
+}
+
+/*----------------------------------------
+    slider1
+------------------------------------------*/
+.slider1 {
+    .slide-content {
+        color: $light;
+        h1 {
+            color: $light;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 2px 3.464px 4px rgba(#000, 0.7);
+        }
+        p {
+            font-family: $roboto-slab;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 100;
+            text-shadow: 1px 1.732px 2px rgba(#000, 0.7);
+        }
+    }
+    .owl-dots {
+        display: none !important;
+    }
+}
+/*----------------------------------------
+    slider2
+------------------------------------------*/
+.slider2 {
+    .slide-content {
+        color: $light;
+        position: relative;
+        h1 {
+            color: $light;
+            font-size: 60px;
+            font-weight: 900;
+            line-height: 80px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: $light;
+            font-size: 56px;
+        }
+        p {
+            font-family: $roboto-slab;
+            font-size: 24px;
+            line-height: 36px;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        img.logo {
+            margin-bottom: 50px;
+        }
+        a:last-child {
+            margin-left: 20px;
+        }
+    }
+    .owl-dots {
+        display: none !important;
+    }
+}
+/*----------------------------------------
+    banner3
+------------------------------------------*/
+.banner3 {
+    .slide-content {
+        position: relative;
+        h1, h2, p { color: $light; }
+        h2 {
+            font-size: 24px;
+            font-weight: 900;
+        }
+        h1 {
+            font-size: 60px;
+            font-weight: 900;
+            line-height: 70px;
+            margin-top: 15px;
+        }
+        p {
+            font-family: $roboto-slab;
+            font-size: 24px;
+            line-height: 36px;
+            letter-spacing: 0.7px;
+        }
+    }
+    .owl-dots {
+        display: none !important;
+    }
+}
+/*----------------------------------------
+    slider4
+------------------------------------------*/
+.slider4 {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .slide-content {
+        h2 {
+            line-height: 1.2;
+        }
+    }
+}
+
+/*----------------------------------------
+    Magazine slider-1 / home-magazine
+------------------------------------------*/
+.mag-slider-1 {
+    .item {
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .container {
+        position: relative;
+        height: 100vh;
+    }
+    .owl-dots {
+        bottom: 70px;
+        left: 0;
+        margin: 0;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.mag-slide-content {
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    @include transform (translateY(-50%));
+
+    h2 {
+        font-size: 60px;
+        line-height: 72px;
+        margin-bottom: 35px;
+    }
+
+    .sep {
+        background-color: rgba($light, 0.5);
+        display: block;
+        height: 1px;
+        position: relative;
+        margin-bottom: 37px;
+        z-index: 0;
+        &::before {
+            background-color: $primary-color;
+            content: '';
+            width: 110px;
+            height: 3px;
+            position: absolute;
+            left: 50%;
+            top: -1px;
+            z-index: 1;
+            @include transform (translateX(-50%));
+        }
+    }
+
+    p {
+        color: $light;
+        font-size: 18px;
+        line-height: 30px;
+        margin-bottom: 45px;
+    }
+}
+
+// home charity
+.charity-slide-parallax {
+    h2 {
+        padding-bottom: 30px;
+        position: relative;
+    }
+    .text-shade {
+        display: block;
+        font-size: 120px;
+        font-weight: 700;
+        left: 0;
+        line-height: 1;
+    }
+    .button::before {
+        background-color: $light;
+        content: "";
+        height: 1px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        width: 200%;
+        @include transform (translateX(-50%));
+    }
+}
+
+.sp-slide-parallax {
+    h3 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+}
+
+// shop.php
+.shop-slider-1 {
+    background-color: #ddd;
+    h4::after {
+        background-color: $title-color;
+        content: "";
+        height: 1px;
+        position: absolute;
+        top: -14px;
+        right: 4px;
+        width: 80px;
+    }
+    h5 {
+        letter-spacing: 3px;
+        &::before {
+            background-color: $title-color;
+            content: "";
+            height: 1px;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+        }
+    }
+}
+
+// home-shop-2.php
+.shop-slider-2 {
+    .slide-content {
+        h2 {
+            color: $dark;
+            font-size: 55px;
+            line-height: 60px;
+        }
+        .sep {
+            background-color: $dark;
+            display: block;
+            height: 2px;
+            width: 80px;
+        }
+        .img1, .img2 {
+            width: 50%;
+            margin-left: auto;
+        }
+    }
+    .item2 {
+        background-color: #dcdbe0;
+    }
+}
+
+//shop-3.php
+.shop-slider-3 {
+    .item {
+        position: relative;
+    }
+    .caption {
+        bottom: 44px;
+        left: 60px;
+        position: absolute;
+        right: 60px;
+        h2 {
+            line-height: 1.44;
+            margin-bottom: 7px;
+            span {
+                background-color: rgba(#000, .87);
+                padding: 0 13px 2px;
+            }
+        }
+    }
+    .owl-dots {
+        bottom: 0;
+        min-height: 62px;
+        position: static;
+        @include align-items(center);
+        @include flexbox();
+        @include justify-content(center);
+    }
+}
+
+.banner-sports {
+    .left-bg,
+    .right-bg {
+        background-color: rgba(#000, 0.3);
+        height: 340px;
+        left: -130px;
+        position: absolute;
+        top: 50%;
+        @include transform (translateY(-50%) skewX(-33deg));
+        @include calc ( width, "50% + 130px");
+    }
+    .right-bg {
+        background-color: rgba($primary-color, 0.3);
+        left: auto;
+        right: -130px;
+        @include transform (translateY(-50%) skew(-33deg));
+    }
+    h2 {
+        font-size: 100px;
+        line-height: 1.1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,356 @@
+
+/*----------------------------------------
+    Collapsible
+------------------------------------------*/
+.collapsible {
+    &.style-1 {
+        border: 0 none;
+        box-shadow: none;
+        margin: 0;
+        li {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .collapsible-header {
+            color: $title-color;
+            font-family: $roboto-slab;
+            border: 0;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 12px 18px 10px;
+            &.active {
+                background-color: $primary-color;
+                box-shadow: $box-shadow-1;
+                color: $light;
+            }
+            i {
+                font-size: 20px;
+                line-height: 30px;
+                margin-right: 24px;
+            }
+        }
+
+        .collapsible-body {
+            border: 0 none;
+            padding: 25px;
+            p {
+                padding: 0;
+            }
+            img {
+                background-color: $light;
+                display: inline-block;
+                border-radius: $border-radius;
+                float: left;
+                margin-right: 15px;
+                padding: 2px;
+            }
+        }
+    }
+    &.style2 {
+        li {
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+            margin-bottom: 15px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .collapsible-header {
+            position: relative;
+            background-color: #e6e9ed;
+            color: $title-color;
+            font-family: $roboto-slab;
+            border: 0;
+            line-height: 30px;
+            font-size: 16px;
+            font-weight: 300;
+            padding: 12px 18px 10px;
+            &.active {
+                background-color: $primary-color;
+                box-shadow: $box-shadow-1;
+                color: $light;
+                i {
+                    background-color: $primary-color;
+                    color: $light;
+                }
+                .open {
+                    display: none;
+                }
+                .close {
+                    display: block;
+                }
+            }
+            i {
+                background-color: rgba(#f6f7f9, .5);
+                border-top-right-radius: 2px;
+                height: 52px;
+                line-height: 52px;
+                position: absolute;
+                right: -24px;
+                top: 0;
+                width: 52px;
+                opacity: 1;
+                font-size: 20px;
+                margin-right: 24px;
+            }
+            .close {
+                display: none;
+            }
+        }
+        .collapsible-body {
+            border: 0 none;
+            padding: 25px;
+            p {
+                padding: 0;
+            }
+            img {
+                background-color: $light;
+                display: inline-block;
+                border-radius: $border-radius;
+                float: left;
+                margin-right: 15px;
+                padding: 2px;
+            }
+        }
+    }
+
+    &.style-3 {
+        box-shadow: none;
+        border: 0;
+        margin: 0;
+        .collapsible-header {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .active {
+            .collapsible-header {
+                border-bottom-color: transparent;
+                color: $title-color;
+            }
+            .collapsible-body {
+                border-bottom-color: $title-color;
+                padding: 5px 30px 22px 30px;
+            }
+        }
+    }
+
+    &.style-4 {
+        box-shadow: none;
+        border: 0;
+        margin: 0;
+        li + li {
+            margin-top: 2px;
+        }
+        .collapsible-header {
+            background-color: $gray-bg-3;
+            border-bottom: 0;
+            line-height: inherit;
+            padding: 9px 30px;
+        }
+        .collapsible-body {
+            border-bottom: 0;
+        }
+        .active {
+            .collapsible-header {
+                background-color: $gray-bg-4;
+                color: $title-color;
+            }
+            .collapsible-body {
+                background-color: $gray-bg-4;
+                padding: 5px 30px 22px 30px;
+            }
+        }
+    }
+}
+
+/*----------------------------------------
+    accordion
+------------------------------------------*/
+.accordion-item {
+    &.style-1 {
+        + .accordion-item {
+            margin-top: 25px;
+        }
+        .accordion-title {
+            border-bottom: 1px solid $border-color;
+            padding-bottom: 25px;
+        }
+        .accordion-body {
+            padding: 35px 30px 0;
+        }
+    }
+}
+
+.mt-ac-1 {
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    .panel-heading {
+        background-color: transparent;
+        border-bottom: 1px solid rgba($dark, 0.3);
+        padding: 0;
+        a {
+            display: block;
+            padding: 8px 30px 11px;
+        }
+        &.active {
+            border-bottom-color: $dark;
+            a {
+                color: $dark;
+            }
+        }
+    }
+    .panel-body {
+        padding: 23px 0;
+    }
+}
+
+.mt-ac-2 {
+    box-shadow: none;
+    margin: 0 0 1px;
+    padding: 0;
+    .panel-heading {
+        background-color: transparent;
+        border: 1px solid rgba($dark, 0.1);
+        padding: 0;
+        a {
+            display: block;
+            padding: 8px 30px 11px;
+        }
+        &.active {
+            border-color: $dark;
+            a {
+                color: $dark;
+            }
+        }
+    }
+    .panel-body {
+        
+    }
+}
+
+.mt-ac-3 {
+    margin: 0 0 1px;
+    padding: 0;
+    .panel-heading {
+        background-color: transparent;
+        border: 1px solid rgba($dark, 0.1);
+        padding: 8px 30px 11px;
+        padding: 0;
+        a {
+            display: block;
+            padding: 8px 30px 11px;
+        }
+        &.active {
+            background-color: $primary-color;
+            border-color: $primary-color;
+            a {
+                color: $light;
+            }
+        }
+    }
+    .panel-body {
+        
+    }
+}
+
+.mt-ac-4 {
+    border: 1px solid transparent;
+    box-shadow: none;
+    margin: 0 0 1px;
+    padding: 0;
+    .panel-heading {
+        background-color: transparent;
+        border: 1px solid rgba($dark, 0.1);
+        padding: 0;
+        @include transition( all 0.2s linear 0s );
+        a {
+            display: block;
+            padding: 8px 30px 11px;
+        }
+    }
+    &.active {
+        border-color: $dark;
+        .panel-heading {
+            border-color: transparent transparent $dark;
+            a {
+                color: $dark;
+            }
+        }
+    }
+    .panel-body {
+        
+    }
+}
+
+.mt-ac-5 {
+    border: 1px solid transparent;
+    box-shadow: none;
+    margin: 0 0 1px;
+    padding: 0;
+    .panel-heading {
+        background-color: transparent;
+        border: 1px solid rgba($dark, 0.1);
+        padding: 0;
+        @include transition( all 0.2s linear 0s );
+        a {
+            display: block;
+            padding: 8px 30px 11px;
+        }
+    }
+    &.active {
+        border-color: transparent;
+        box-shadow: $box-shadow-1;
+        .panel-heading {
+            border-color: transparent transparent rgba($dark, 0.1);
+            a {
+                color: $dark;
+            }
+        }
+    }
+    .panel-body {
+        
+    }
+}
+
+.mt-ac-6 {
+    border: 1px solid transparent;
+    box-shadow: none;
+    margin: 0 0 1px;
+    padding: 0;
+    .panel-heading {
+        background-color: $gray-bg-3;
+        border: 0;
+        border-radius: $border-radius;
+        padding: 0;
+        @include transition( all 0.2s linear 0s );
+        a {
+            display: block;
+            padding: 8px 30px 11px;
+        }
+    }
+    .panel-body {
+        border-radius: $border-radius;
+    }
+    &.active {
+        border-color: transparent;
+        box-shadow: $box-shadow-1;
+        .panel-heading {
+            background-color: $primary-color;
+            a {
+                color: $light;
+            }
+        }
+        .panel-body {
+            border: 1px solid rgba($dark, 0.1);
+            border-top: 0;
+        }
+    }
+}
+
+
+

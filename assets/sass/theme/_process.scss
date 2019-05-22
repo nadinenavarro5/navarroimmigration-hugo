@@ -1,0 +1,217 @@
+
+/*----------------------------------------
+    Process
+------------------------------------------*/
+.process-1 {
+    padding: 100px 0;
+    text-align: center;
+    &:nth-child(2n+1) {
+        background-color: $light;
+    }
+    &:nth-child(2)::before {
+        border-bottom-color: $light-bg;
+        border-top-color: $light-bg;
+    }
+    &::before {
+        border-color: $light transparent;
+        border-style: solid;
+        border-width: 162px 80px;
+        content: "";
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        @include transform (translateX(-50%));
+    }
+    &:last-child::after {
+        border-color: transparent transparent transparent $light;
+        border-style: solid;
+        border-width: 162px 75px;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        @include transform(translateX(98%));
+    }
+    .icon {
+        color: $title-color;
+        display: inline-block;
+        font-size: 60px;
+        margin-bottom: 27px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+}
+
+.process-2 {
+    .icon {
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eeeeee+1,ffffff+100 */
+        background: $gray-bg; /* Old browsers */
+        background: -webkit-radial-gradient(50% 50%, circle closest-side, $light 0%, $gray-bg 100%); /* Chrome10-25,Safari5.1-6 */
+        background:    -moz-radial-gradient(50% 50%, circle closest-side, $light 0%, $gray-bg 100%); /* FF3.6-15 */
+        background:      -o-radial-gradient(50% 50%, circle closest-side, $light 0%, $gray-bg 100%); /* FF3.6-15 */
+        background:         radial-gradient(50% 50%, circle closest-side, $light 0%, $gray-bg 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        color: $title-color;
+        border-radius: 50%;
+        font-size: 60px;
+        height: 250px;
+        line-height: 250px;
+        margin: 0 auto 30px;
+        position: relative;
+        width: 250px;
+    }
+    .number {
+        background-color: $gray-bg;
+        border: 1px solid $primary-color;
+        border-radius: 50%;
+        color: $title-color;
+        font-family: $roboto-slab;
+        font-size: 30px;
+        height: 50px;
+        left: 50%;
+        line-height: 46px;
+        position: absolute;
+        top: 0;
+        width: 50px;
+        z-index: 0;
+        @include transform(translate(-50%, -50%));
+        @include transition(all 0.3s ease 0s);
+        &::before {
+            border: 5px solid $light;
+            border-radius: 50%;
+            content: "";
+            height: 60px;
+            left: 50%;
+            margin: -30px 0 0 -30px;
+            position: absolute;
+            top: 50%;
+            width: 60px;
+            z-index: -1;
+        }
+    }
+    &:hover {
+        .number {
+            background-color: $primary-color;
+            color: $light;
+        }
+        h4 {
+            color: $primary-color;
+        }
+    }
+}
+
+.process-3 {
+    .icon {
+        background-color: $light;
+        border-radius: 50%;
+        box-shadow: $box-shadow-1;
+        color: $title-color;
+        font-size: 60px;
+        height: 250px;
+        line-height: 260px;
+        margin: 0 auto 40px;
+        text-align: center;
+        position: relative;
+        width: 250px;
+        &::after {
+            background: transparent url("../img/icons/repeat.png") no-repeat scroll 0 0;
+            content: "";
+            height: 31px;
+            left: 100%;
+            position: absolute;
+            top: 50%;
+            width: 50px;
+            @include transform (translate(30%, -50%));
+        }
+    }
+    h4 {
+        font-size: 18px;
+    }
+    &:hover {
+        .icon {
+            color: $primary-color;
+        }
+    }
+}
+
+[class^="col-"]:last-child .process-3  {
+    .icon::after {
+        content: none;
+    }
+}
+
+.process-4 {
+    li {
+        a {
+            display: block;
+            position: relative;
+            polygon {
+                fill: rgba($dark, 0.4);
+                stroke: transparent;
+                @include transition();
+            }
+            &:hover {
+                polygon {
+                    fill: rgba($dark, 0.2);
+                    stroke: $primary-color;
+                }
+                .process-label {
+                    color: $primary-color;
+                }
+            }
+        }
+        .process-label {
+            color: $light;
+            font-family: $roboto-slab;
+            font-size: 24px;
+            font-weight: 300;
+            @include transition();
+        }
+    }
+    
+    &.tab-content {
+        margin-top: 68px;
+    }
+
+    .tab-pane {
+        border-top: 1px solid $primary-color;
+        padding: 40px 0;
+    }
+}
+
+.process-5 {
+    .icon {
+        background-color: $gray-bg-3;
+        border-radius: 50%;
+        font-size: 48px;
+        height: 190px;
+        line-height: 190px;
+        margin-bottom: 20px;
+        position: relative;
+        width: 190px;
+    }
+    svg {
+        left: 0;
+        position: absolute;
+        top: 0;
+        @include transform (scale(1.075));
+        ellipse {
+            fill:transparent;
+            stroke: transparent;
+            stroke-width:3;
+            stroke-linecap:round;
+            stroke-dasharray:0,7.9543,0,7.9543,0,7.9543;
+            @include transition();
+        }
+    }
+    &:hover {
+        .icon {
+            color: $primary-color;
+        }
+        svg ellipse {
+            stroke: $primary-color;
+        }
+    }
+}

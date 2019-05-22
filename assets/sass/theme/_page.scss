@@ -1,0 +1,419 @@
+
+/*==============================================
+    Page
+===============================================*/
+
+.page-header {
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-bottom: 0 none;
+    margin: 0;
+    // padding: 200px 0 60px; // old
+    padding: 200px 0 100px;
+    &.style-2 {
+        padding: 125px 0 140px;
+    }
+    &.primary-bg {
+        padding: 104px 0 114px;
+    }
+    &.bg-scroll {
+        background-attachment: scroll;
+    }
+    .page-title {
+        position: relative;
+        p {
+            color: $text-light;
+            font-size: 16px;
+            margin-top: 17px;
+        }
+    }
+    &.google-map {
+        padding: 200px 0;
+        .overlay {
+            @include transition();
+        }
+        &:hover {
+            .overlay,
+            .page-title,
+            .page-breadcrumb {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    }
+    #map-half {
+        width: 100%;
+    }
+}
+
+.page-breadcrumb {
+    li {
+        display: inline-block;
+        &::after {
+            color: #fff;
+            content: "/";
+            display: inline-block;
+            padding: 0 5px;
+        }
+        &:last-child::after {
+            content: none;
+        }
+        a {
+            letter-spacing: 2.1px;
+        }
+    }
+    &.text li::after {
+        color: $text-color;
+    }
+}
+
+/*==============================================
+    BreadCrumb
+===============================================*/
+
+.breadcrumb-wrapper {
+    padding: 80px 0;
+}
+
+.mat-breadcrumb {
+    li {
+        display: inline-block;
+        padding-right: 50px;
+        position: relative;
+        &::after {
+            content: "\279D";
+            font-size: 28px;
+            position: absolute;
+            right: 15px;
+            top: 2px;
+        }
+        a {
+            color: $text-color;
+            display: block;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+    }
+    .active {
+        font-weight: 700;
+        padding-right: 0;
+        &:after {
+            content: none;
+        }
+    }
+}
+
+/* --process page-- */
+.process-section {
+    position: relative;
+    &::before {
+        border-right: 1px dotted $border-color;
+        content: "";
+        height: 100%;
+        left: 50%;
+        margin-left: -0.5px;
+        position: absolute;
+        top: 0;
+    }
+}
+
+.process-section {
+    padding-top: 300px;
+}
+.triangle-shape {
+    left: 50%;
+    position: absolute;
+    top: -30px;
+    @include transform (translateX(-50%));
+    &::before,
+    &::after {
+        border-color: transparent transparent #f3f3f3;
+        border-style: solid;
+        border-width: 30px;
+        content: "";
+        left: -29px;
+        position: absolute;
+        top: -30px;
+    }
+    &::after {
+        left: auto;
+        right: -29px;
+    }
+    .shape-1 {
+        display: block;
+        overflow: hidden;
+        padding: 10px;
+    }
+    .shape-2 {
+        background-color: $light;
+        box-shadow: 0 3px 10px 0 rgba($dark, 0.1);
+        display: block;
+        height: 400px;
+        width: 400px;
+        @include transform(rotate(45deg) translate(-50%, -50%));
+    }
+    .triangle-title {
+        left: 50%;
+        position: absolute;
+        text-align: center;
+        top: 47px;
+        z-index: 1;
+        @include transform(translateX(-50%));
+    }
+}
+
+.half-bg {
+    .half-bg-container {
+        left: 0;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 50%;
+        z-index: 1;
+        &.white-bg {
+            background-color: $light;
+        }
+        &.right-bg {
+            left: auto;
+            right: 0;
+        }
+    }
+}
+
+.overlap-top-50 {
+    margin-top: -50px;
+}
+
+/*==============================================
+    Page submenu
+===============================================*/
+
+.page-submenu {
+    & > li {
+        & > a {
+            color: $title-color;
+            display: block;
+            height: 80px;
+            line-height: 80px;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+    }
+}
+
+/*==============================================
+    Page Login
+===============================================*/
+
+.page-login-wrapper {
+    .matex-login {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 400px;
+        width: 100%;
+    }
+    &.style-3 {
+        background-color: rgba($dark, 0.5);
+        padding: 120px 0 100px;
+    }
+}
+
+.hr-white {
+    background-color: #fff;
+    display: block;
+    height: 1px;
+}
+
+/*==============================================
+    Animation block
+===============================================*/
+
+.animation-block {
+    .icon {
+        font-size: 48px;
+    }
+}
+
+/*==============================================
+    Page Search
+===============================================*/
+.search-result-box {
+    padding: 43px 60px 46px;
+    margin-bottom: 30px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*==============================================
+    404 - 1
+===============================================*/
+
+.section-404-1 {
+    .newsletter-3 {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 530px;
+        .nl-input {
+            height: 58px;
+        }
+    }
+}
+
+/*==============================================
+    Page Maintanance
+===============================================*/
+.maintanance-page {
+    h1 {
+        font-size: 72px;
+        line-height: 1;
+    }
+}
+
+/*==============================================
+    Page Maintanance
+===============================================*/
+.comingsoon-page {
+    h1 {
+        font-size: 60px;
+        line-height: 1;
+    }
+    .newsletter-3 {
+        box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2),
+                    0 -2px 0 0 rgba(255, 255, 255, 0.2) inset;
+        border-radius: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 700px;
+        .nl-inner {
+            border: 0;
+            padding: 0;
+        }
+        .nl-input {
+            background: url("../img/misc/nl-i-bg.png") repeat scroll 0 0 transparent;
+            border: 1px solid rgba($light, 0.05);
+            box-sizing: border-box;
+            height: 58px;
+            padding-left: 50px;
+        }
+    }
+}
+
+.cd-container {
+    position: relative;
+    &::before {
+        background-color: #f9f9f9;
+        bottom: 0;
+        content: "";
+        height: 50%;
+        left: 0;
+        position: absolute;
+        width: 100%;
+    }
+}
+
+.main-example {
+    .time {
+        border-radius: 5px;
+        box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+        display: inline-block;
+        text-align: center;
+        position: relative;
+
+        font-family: roboto slab;
+        font-size: 85px;
+        font-weight: 700;
+        height: 145px;
+        line-height: 143px;
+        width: 175px;
+
+        @include perspective (479px);
+        @include backface-visibility (hidden);
+        @include transform (translateZ(0));
+        @include transform (translate3d(0,0,0));
+    }
+    .count {
+        background-color: $primary-color;
+        color: $light;
+        display: block;
+        overflow: hidden;
+        position: absolute;
+        text-align: center;
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+        top: 0;
+        width: 100%;
+
+        @include transform (translateZ(0));
+
+        -webkit-transform-style: flat;
+           -moz-transform-style: flat;
+            -ms-transform-style: flat;
+             -o-transform-style: flat;
+                transform-style: flat;
+
+        &.top {
+            border-bottom: 1px solid #dedede;
+            border-radius: 5px 5px 0 0;
+            height: 50%;
+
+            @include transform-origin (50% 100%);
+        }
+
+        &.bottom {
+            background-image: linear-gradient(rgba(255,255,255,0.1), transparent);
+            background-image: -webkit-linear-gradient(rgba(255,255,255,0.1), transparent);
+            background-image: -moz-linear-gradient(rgba(255,255,255,0.1), transparent);
+            background-image: -ms-linear-gradient(rgba(255,255,255,0.1), transparent);
+            background-image: -o-linear-gradient(rgba(255,255,255,0.1), transparent);
+            border-top: 1px solid #f9f9f9;
+            border-radius: 0 0 5px 5px;
+            line-height: 0;
+            height: 50%;
+            top: 50%;
+
+            @include transform-origin (50% 0);
+        }
+
+        &.curr.top {
+            z-index: 3;
+            @include transform (rotateX(0deg));
+        }
+        &.next.bottom {
+            @include transform (rotateX(90deg));
+            z-index: 2;
+        }
+    }
+    .flip {
+        .count.curr.top {
+            @include transition(all 250ms ease-in-out);
+            @include transform(rotateX(-90deg));
+        }
+        .count.next.bottom {
+            @include transition(all 250ms ease-in-out 250ms);
+            @include transform(rotateX(0deg));
+        }
+    }
+    .label {
+        bottom: -40px;
+        color: #f6514c;
+        font-size: 23px;
+        font-weight: 600;
+        left: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        text-transform: capitalize;
+    }
+}
+
+/*==============================================
+    Page Login
+===============================================*/
+
+
+
